@@ -6,6 +6,7 @@
 */
 
 #include "get_next_line.h"
+#include <stdlib.h>
 
 char *my_strcat(char *dest, char const *src)
 {
@@ -32,15 +33,38 @@ int my_strlen(char const *str)
     }
 }
 
-int main(int ac, char **av)
+char *get_next_line(int fd)
 {
-    int fd = open(av[1], O_RDONLY);
-    if (fd == -1)
-        return (84);
-    if (ac != 2)
-        return (84);
-    struct stat get;
-    int lenght = get.st_size;
-    char *buffer = malloc(sizeof(char) * (lenght + 1));
-    int back = read(fd, buffer, lenght);
+    char *buffer = malloc(sizeof(char) * READ_SIZE);
+    int back = read(fd, buffer, READ_SIZE);
+
+    if (fd < 0 || buffer == NULL)
+        return (NULL);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //int lenght = get.st_size;
