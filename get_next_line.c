@@ -36,35 +36,7 @@ int my_strlen(char const *str)
 char *get_next_line(int fd)
 {
     char *buffer = malloc(sizeof(char) * READ_SIZE);
-    int back = read(fd, buffer, READ_SIZE);
 
     if (fd < 0 || buffer == NULL)
         return (NULL);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //int lenght = get.st_size;
