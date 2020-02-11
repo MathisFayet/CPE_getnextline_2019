@@ -8,6 +8,9 @@
 #ifndef GET_NEXT_LINE_H_
 #define GET_NEXT_LINE_H_
 
-#define READ_SIZE (4)
+#define READ_SIZE (1)
+
+char *get_nex_line(int fd);
+int main(int argc, char const *argv[]);
 
 #endif /* !GET_NEXT_LINE_H_ */
