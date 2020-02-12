@@ -16,16 +16,17 @@
 
 static int my_strlen(char const *str)
 {
-    int i = 0;
+    int index = 0;
 
-    while (str[i] != '\0') {
-        i += 1;
+    while (str[index] != '\0') {
+        index += 1;
     }
+    return (index);
 }
 
-char *my_strcat(char *tmp, char *buffer)
+char *my_strcat(char *tmp, char *buff)
 {
-    char *str = malloc(sizeof(char) * (my_strlen(tmp) + my_strlen(buffer) + 1));
+    char *str = malloc(sizeof(char) * (my_strlen(tmp) + my_strlen(buff) + 1));
     int first = 0;
     int second = 0;
 
@@ -33,8 +34,8 @@ char *my_strcat(char *tmp, char *buffer)
         str[first] = tmp[first];
         first += 1;
     }
-    while (buffer[second] != '\0') {
-        str[first] = buffer[second];
+    while (buff[second] != '\0') {
+        str[first] = buff[second];
         second += 1;
         first += 1;
     }
@@ -72,7 +73,7 @@ static int check_function(char *buffer)
     return (0);
 }
 
-char *get_nex_line(int fd)
+char *get_next_line(int fd)
 {
     static char *tmp = NULL;
     char *buffer = malloc(sizeof(char) * (READ_SIZE + 1));

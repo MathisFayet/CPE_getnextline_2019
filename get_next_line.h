@@ -10,7 +10,7 @@
 
 #define READ_SIZE (1)
 
-char *get_nex_line(int fd);
+char *get_next_line(int fd);
 int main(int argc, char const *argv[]);
 
 #endif /* !GET_NEXT_LINE_H_ */
