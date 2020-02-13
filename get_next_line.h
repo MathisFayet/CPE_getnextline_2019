@@ -8,9 +8,11 @@
 #ifndef GET_NEXT_LINE_H_
 #define GET_NEXT_LINE_H_
 
-#define READ_SIZE (1)
+#ifndef READ_SIZE
+#define READ_SIZE (1000)
 
 char *get_next_line(int fd);
 int main(int argc, char const *argv[]);
 
+#endif /* READ_SIZE_ */
 #endif /* !GET_NEXT_LINE_H_ */
