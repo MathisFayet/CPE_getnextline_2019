@@ -11,7 +11,8 @@
 #ifndef READ_SIZE
 #define READ_SIZE (1000)
 
+#endif /* READ_SIZE_ */
+
 char *get_next_line(int fd);
 
-#endif /* READ_SIZE_ */
 #endif /* !GET_NEXT_LINE_H_ */
